@@ -1,11 +1,22 @@
 import React from 'react'
+import PhotoLib from "./components/PhotoLib.jsx";
+import Nav from "./components/nav/Nav.jsx";
+import Locations from "./components/Locations.jsx";
+import Slogan from "./components/Slogan.jsx";
+import Reviews from "./components/Reviews.jsx";
+import FourSeasons from "./components/FourSeasons.jsx";
+import SocialMedias from "./components/SocialMedias.jsx";
 
 const App = () => {
     return (
         <main>
-            <h1 className="text-5xl text-orange-500 font-bold">
-                Welcome!
-            </h1>
+            <Nav />
+            <PhotoLib />
+            <Locations />
+            <Slogan />
+            <Reviews />
+            <FourSeasons />
+            <SocialMedias />
         </main>
     )
 }
