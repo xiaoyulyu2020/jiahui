@@ -4,8 +4,16 @@ import img1 from '../../../public/image/img1.jpg';
 import img2 from '../../../public/image/img2.jpg';
 import img3 from '../../../public/image/img3.jpg';
 import img4 from '../../../public/image/img4.jpg';
+import img5 from '../../../public/image/img5.jpg';
+import img6 from '../../../public/image/img6.jpg';
+import img7 from '../../../public/image/img7.jpg';
+import img8 from '../../../public/image/img8.jpg';
+import img9 from '../../../public/image/img9.jpg';
+import img10 from '../../../public/image/img10.jpg';
+import img11 from '../../../public/image/img11.jpg';
 
-const images = [img1, img2, img3, img4];
+
+const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11];
 
 export default function Nav() {
     const [sliderItems, setSliderItems] = useState(images);
@@ -66,11 +74,11 @@ export default function Nav() {
                             <div className="frosted-left" />
                             <img src={imgSrc} alt={`slide-${index}`} />
                             <div className="content">
-                                <div className="author">LUNDEV</div>
-                                <div className="title">DESIGN SLIDER</div>
-                                <div className="topic">ANIMAL</div>
+                                <div className="author">中国</div>
+                                <div className="title">北京</div>
+                                <div className="topic">遇涧花开</div>
                                 <div className="des">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut sequi, rem magnam...
+                                    期待与您相遇
                                 </div>
                                 <div className="buttons">
                                     <button>SEE MORE</button>

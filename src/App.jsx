@@ -1,9 +1,9 @@
 import React from 'react'
-import PhotoLib from "./components/PhotoLib.jsx";
+import Title from "./components/title/Title.jsx";
 import Nav from "./components/nav/Nav.jsx";
 import Locations from "./components/Locations.jsx";
-import Slogan from "./components/Slogan.jsx";
-import Reviews from "./components/Reviews.jsx";
+import History from "./components/history/History.jsx";
+import Reviews from "./components/Reviews/Reviews.jsx";
 import FourSeasons from "./components/FourSeasons.jsx";
 import SocialMedias from "./components/SocialMedias.jsx";
 
@@ -11,9 +11,9 @@ const App = () => {
     return (
         <main>
             <Nav />
-            <PhotoLib />
+            <Title />
+            <History />
             <Locations />
-            <Slogan />
             <Reviews />
             <FourSeasons />
             <SocialMedias />
