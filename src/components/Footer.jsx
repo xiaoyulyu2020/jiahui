@@ -1,8 +1,8 @@
 import React from 'react'
 
-const SocialMedias = () => {
+const Footer = () => {
     return (
         <div>SocialMedias</div>
     )
 }
-export default SocialMedias
+export default Footer

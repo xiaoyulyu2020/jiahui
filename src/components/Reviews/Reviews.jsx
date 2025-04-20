@@ -25,42 +25,9 @@ import slider2_9 from "./images/slider2_9.png";
 const Reviews = () => {
     return (
         <main>
-            {/* First Slider */}
-            <div className="slider" style={{ "--width": "100px", "--height": "50px", "--quantity": 10 }}>
-                <div className="list">
-                    <div className="item" style={{ "--position": 1 }}>
-                        <img src={slider1_1} alt="Slider 1 - 1" />
-                    </div>
-                    <div className="item" style={{ "--position": 2 }}>
-                        <img src={slider1_2} alt="Slider 1 - 2" />
-                    </div>
-                    <div className="item" style={{ "--position": 3 }}>
-                        <img src={slider1_3} alt="Slider 1 - 3" />
-                    </div>
-                    <div className="item" style={{ "--position": 4 }}>
-                        <img src={slider1_4} alt="Slider 1 - 4" />
-                    </div>
-                    <div className="item" style={{ "--position": 5 }}>
-                        <img src={slider1_5} alt="Slider 1 - 5" />
-                    </div>
-                    <div className="item" style={{ "--position": 6 }}>
-                        <img src={slider1_6} alt="Slider 1 - 6" />
-                    </div>
-                    <div className="item" style={{ "--position": 7 }}>
-                        <img src={slider1_7} alt="Slider 1 - 7" />
-                    </div>
-                    <div className="item" style={{ "--position": 8 }}>
-                        <img src={slider1_8} alt="Slider 1 - 8" />
-                    </div>
-                    <div className="item" style={{ "--position": 9 }}>
-                        <img src={slider1_9} alt="Slider 1 - 9" />
-                    </div>
-                    <div className="item" style={{ "--position": 10 }}>
-                        <img src={slider1_10} alt="Slider 1 - 10" />
-                    </div>
-                </div>
-            </div>
-
+            <section className="grid-3">
+                <p className="note-text" style={{ color: "#f1683a" }}>&#8600;顾客反馈</p>
+            </section>
             {/* Second Slider */}
             <div className="slider" reverse="true" style={{ "--width": "200px", "--height": "200px", "--quantity": 9 }}>
                 <div className="list">

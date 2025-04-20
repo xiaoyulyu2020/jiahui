@@ -1,99 +1,113 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 1rem;
+    padding: 1rem;
 }
 
-.wrapper {
-    width: 100%;
+/* Top-left container (row 1, col 1) */
+.top-left {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
     display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    height: fit-content;
+    padding: 3rem;
+}
+
+/* Content next to top-left container (row 1, col 2) */
+.center {
+    font-size: 1.7em;
+    grid-column: 2 / 3;  /* Move to the second column */
+    grid-row: 1 / 2;     /* Align with the first row */
+    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 1rem;
 }
 
-.container {
-    height: 400px;
+/* Bottom-right container (row 3, col 2 & 3) */
+.bottom-right {
+    grid-column: 2 / 4;  /* Span columns 2 and 3 */
+    grid-row: 3 / 4;     /* Ensure it's placed in the third row */
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-}
-
-.card {
-    width: 80px;
-    border-radius: .75rem;
-    background-size: cover;
-    cursor: pointer;
-    overflow: hidden;
-    border-radius: 2rem;
-    margin: 0 10px;
-    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
     align-items: flex-end;
-    transition: .6s cubic-bezier(.28,-0.03,0,.99);
-    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+    padding: 8rem;
 }
 
-.card > .row {
+/* Preserve your hover effects and sizing */
+.container {
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.container .item {
+    width: 10rem;
+    height: 20rem;
+    transition: 0.5s;
+    filter: brightness(0.2);
+    cursor: pointer;
+}
+
+.container .item:hover {
+    filter: brightness(1);
+    transform: translateZ(200px);
+}
+
+.container .item:hover + * {
+    filter: brightness(0.6);
+    transform: translateZ(150px) rotateY(40deg);
+}
+
+.container .item:hover + * + * {
+    filter: brightness(0.4);
+    transform: translateZ(70px) rotateY(20deg);
+}
+
+.container .item:has(+ *:hover) {
+    filter: brightness(0.6);
+    transform: translateZ(150px) rotateY(-40deg);
+}
+
+.container .item:has(+ * + *:hover) {
+    filter: brightness(0.4);
+    transform: translateZ(70px) rotateY(-20deg);
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item {
+    position: relative;
+}
+
+.item .intro {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.7);
     color: white;
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-.card > .row > .icon {
-    background: #223;
-    color: white;
-    border-radius: 50%;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px;
-}
-
-.card > .row > .description {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    overflow: hidden;
-    height: 80px;
-    width: 520px;
+    font-size: 0.9rem;
     opacity: 0;
-    transform: translateY(30px);
-    transition-delay: .3s;
-    transition: all .3s ease;
+    transform: translateY(10px);
+    transition: 0.3s ease;
+    pointer-events: none;
+    text-align: center;
 }
 
-.description p {
-    color: #b0b0ba;
-    padding-top: 5px;
-}
-
-.description h4 {
-    text-transform: uppercase;
-}
-
-input {
-    display: none;
-}
-
-input:checked + label {
-    width: 600px;
-}
-
-input:checked + label .description {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-}
-
-.card[for="c1"] {
-    background-image: url('./images/img1.jpg');
-}
-.card[for="c2"] {
-    background-image: url('./images/img2.jpg');
-}
-.card[for="c3"] {
-    background-image: url('./images/img4.jpg');
-}
-.card[for="c4"] {
-    background-image: url('./images/img5.jpg');
+.item:hover .intro {
+    opacity: 1;
+    transform: translateY(0);
 }

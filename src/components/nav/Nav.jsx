@@ -59,13 +59,6 @@ export default function Nav() {
 
     return (
         <div>
-            <header>
-                <nav>
-                    <a href="#Home">Home</a>
-                    <a href="#Contact">Contacts</a>
-                    <a href="#Info">Info</a>
-                </nav>
-            </header>
 
             <div className={`carousel ${animDirection}`}>
                 <div className="list">
