@@ -1,11 +1,9 @@
 import React from 'react'
 import Title from "./components/title/Title.jsx";
 import Nav from "./components/nav/Nav.jsx";
-import Locations from "./components/Locations.jsx";
 import History from "./components/history/History.jsx";
-import Reviews from "./components/Reviews/Reviews.jsx";
-import FourSeasons from "./components/FourSeasons.jsx";
-import Footer from "./components/Footer.jsx";
+// import reviews from "./components/reviews/reviews.jsx";
+import Footer from "./components/footer/Footer.jsx";
 
 const App = () => {
     return (
@@ -13,7 +11,7 @@ const App = () => {
             <Nav />
             <Title />
             <History />
-            <Reviews />
+            {/*<reviews />*/}
             <Footer />
         </main>
     )

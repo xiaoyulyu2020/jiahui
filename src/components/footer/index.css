@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap');
+
+
+.grid-wrapper-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    background-color: #1e1e1e;
+    color: white;
+    padding: 2rem;
+    font-family: "Noto Serif SC", serif;
+}
+
+.left-column,
+.middle-column,
+.right-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-column h1 {
+    font-size: 1.5rem;
+    font-family: "Noto Serif SC", serif;
+    margin-bottom: 1rem;
+    color: #f9c74f;
+}
+
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.contact-list a {
+    font-family: "Noto Serif SC", serif;
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .grid-wrapper-footer {
+        grid-template-columns: 1fr;
+    }
+}
+.grid-wrapper-footer h1 {
+    color: #f1683a;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.contact-list li svg {
+    color: #555;
+}
+
+.map-container {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.right-column h1 {
+    font-size: 1.5rem;
+    font-family: "Noto Serif SC", serif;
+    margin-bottom: 1rem;
+    color: #f1683a;
+}
+
+.social-icons {
+    display: flex;
+    gap: 22px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.social-icons img {
+    width: 42px;
+    height: 42px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}

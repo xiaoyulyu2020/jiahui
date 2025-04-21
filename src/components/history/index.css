@@ -20,8 +20,8 @@
 /* Content next to top-left container (row 1, col 2) */
 .center {
     font-size: 1.7em;
-    grid-column: 2 / 3;  /* Move to the second column */
-    grid-row: 1 / 2;     /* Align with the first row */
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,16 +33,17 @@
 
 /* Bottom-right container (row 3, col 2 & 3) */
 .bottom-right {
-    grid-column: 2 / 4;  /* Span columns 2 and 3 */
-    grid-row: 3 / 4;     /* Ensure it's placed in the third row */
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
     display: flex;
     gap: 1rem;
-    justify-content: flex-end;
+    justify-content: center;
+
     align-items: flex-end;
-    padding: 8rem;
+    padding: 2rem;
 }
 
-/* Preserve your hover effects and sizing */
+/* Shared container transform styles */
 .container {
     transform-style: preserve-3d;
     transform: perspective(1000px);
@@ -110,4 +111,9 @@
 .item:hover .intro {
     opacity: 1;
     transform: translateY(0);
+}
+
+.bottom-right .item {
+    width: 20rem;
+    height: 10rem;
 }
