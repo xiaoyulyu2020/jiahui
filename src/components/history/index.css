@@ -117,3 +117,12 @@
     width: 20rem;
     height: 10rem;
 }
+.head-text {
+    font-weight: 800 !important;
+    font-size: 4em;
+    color: #f1683a;
+    font-family: "Noto Serif SC", serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    opacity: 0.8;
+}
