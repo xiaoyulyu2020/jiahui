@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap');
+
 .grid-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -29,7 +31,11 @@
     color: white;
     background: rgba(0, 0, 0, 0.6);
     border-radius: 1rem;
+    height: 100%;          /* fill the row height */
+    width: 100%;           /* fill the column width */
+    margin: auto;          /* center in its grid cell */
 }
+
 
 /* Bottom-right container (row 3, col 2 & 3) */
 .bottom-right {
@@ -121,7 +127,7 @@
     font-weight: 800 !important;
     font-size: 4em;
     color: #f1683a;
-    font-family: "Noto Serif SC", serif;
+    font-family: "Zhi Mang Xing", cursive;
     font-optical-sizing: auto;
     font-style: italic;
     opacity: 0.8;
