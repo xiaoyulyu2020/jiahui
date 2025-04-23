@@ -38,6 +38,9 @@ const Footer = () => {
             <div className="right-column">
                 <h1>位置</h1>
                 <div className="map-container">
+                    <div className="pin">
+                        Pin
+                    </div>
                     <iframe
                         title="Yujian Huakai Location"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12038.520597072616!2d117.2431!3d40.2063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35f052c9c25f199f%3A0x805c2e0d3b0a96dc!2z5Lit5Zu95YyX5Lqs5YyF5rW35aCC!5e0!3m2!1szh-CN!2sie!4v1713700000000!5m2!1szh-CN!2sie&markers=40.2063,117.2431"
