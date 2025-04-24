@@ -1,44 +1,45 @@
 import React from "react";
 import "./index.css";
 
-import slider2_1 from "./images/slider2_1.png";
-import slider2_2 from "./images/slider2_2.png";
-import slider2_3 from "./images/slider2_3.png";
-import slider2_4 from "./images/slider2_4.png";
-import slider2_5 from "./images/slider2_5.png";
+import slider2_1 from "./images/slider2_1.gif";
+import slider2_2 from "./images/slider2_2.gif";
+import slider2_3 from "./images/slider2_3.gif";
+import slider2_4 from "./images/slider2_4.gif";
+import slider2_5 from "./images/slider2_5.gif";
 
 const feedbacks = [
     {
         avatar: slider2_1,
         rating: 5,
         location: "Shanghai, China",
-        comment: "这个产品真的非常棒！我已经推荐给很多朋友了，大家都说很好用。五星好评！",
+        comment: "这间度假屋太舒适了，设施齐全，环境安静放松。感觉就像在自己家一样！非常推荐！",
     },
     {
         avatar: slider2_2,
-        rating: 4,
+        rating: 5,
         location: "Dublin, Ireland",
-        comment: "Works great. The customer service is amazing. Highly recommend to anyone needing this.",
+        comment: "Perfect holiday home! Super clean, cozy fireplace, and the view was unreal. Can’t wait to book again.",
     },
     {
         avatar: slider2_3,
         rating: 5,
         location: "Tokyo, Japan",
-        comment: "デザインがとても綺麗で、使いやすいです。また購入したいと思います！",
+        comment: "素晴らしい滞在でした！家は清潔で、キッチン設備も充実していて快適でした。また利用したいです。",
     },
     {
         avatar: slider2_4,
-        rating: 3,
+        rating: 5,
         location: "Berlin, Germany",
-        comment: "It's okay for the price, but delivery was a bit slow. Overall, still a decent product.",
+        comment: "Lovely countryside retreat. Quiet nights, fresh air, and a hot tub under the stars. A real hidden gem!",
     },
     {
         avatar: slider2_5,
         rating: 5,
         location: "San Francisco, USA",
-        comment: "Love it! Slick design and very intuitive to use. Would definitely buy again.",
+        comment: "The holiday house had everything—big backyard, full kitchen, comfy beds. Ideal for our family trip!",
     },
 ];
+
 
 const getStars = (rating) => "★".repeat(rating) + "☆".repeat(5 - rating);
 
@@ -52,7 +53,7 @@ const Reviews = () => {
             <div
                 className="slider"
                 reverse="true"
-                style={{ "--width": "300px", "--height": "400px", "--quantity": feedbacks.length }}
+                style={{ "--width": "300px", "--height": "350px", "--quantity": feedbacks.length }}
             >
                 <div className="list">
                     {feedbacks.map((item, index) => (
