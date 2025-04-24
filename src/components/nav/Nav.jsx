@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import './index.css'; // same styles from your original style.css
+import './index.css'; // same styles from your original index.css
 import img1 from "./images/img1.jpg"
 import img2 from "./images/img2.jpg"
 import img3 from "./images/img3.jpg"

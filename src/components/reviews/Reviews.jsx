@@ -1,66 +1,74 @@
-// import React from 'react'
-// import "./style.css";
-//
-// import slider1_1 from "./images/slider1_1.png";
-// import slider1_2 from "./images/slider1_2.png";
-// import slider1_3 from "./images/slider1_3.png";
-// import slider1_4 from "./images/slider1_4.png";
-// import slider1_5 from "./images/slider1_5.png";
-// import slider1_6 from "./images/slider1_6.png";
-// import slider1_7 from "./images/slider1_7.png";
-// import slider1_8 from "./images/slider1_8.png";
-// import slider1_9 from "./images/slider1_9.png";
-// import slider1_10 from "./images/slider1_10.png";
-//
-// import slider2_1 from "./images/slider2_1.png";
-// import slider2_2 from "./images/slider2_2.png";
-// import slider2_3 from "./images/slider2_3.png";
-// import slider2_4 from "./images/slider2_4.png";
-// import slider2_5 from "./images/slider2_5.png";
-// import slider2_6 from "./images/slider2_6.png";
-// import slider2_7 from "./images/slider2_7.png";
-// import slider2_8 from "./images/slider2_8.png";
-// import slider2_9 from "./images/slider2_9.png";
-//
-// const reviews = () => {
-//     return (
-//         <main>
-//             <section className="grid-3">
-//                 <p className="note-text" style={{ color: "#f1683a" }}>&#8600;顾客反馈</p>
-//             </section>
-//             {/* Second Slider */}
-//             <div className="slider" reverse="true" style={{ "--width": "200px", "--height": "200px", "--quantity": 9 }}>
-//                 <div className="list">
-//                     <div className="item" style={{ "--position": 1 }}>
-//                         <img src={slider2_1} alt="Slider 2 - 1" />
-//                     </div>
-//                     <div className="item" style={{ "--position": 2 }}>
-//                         <img src={slider2_2} alt="Slider 2 - 2" />
-//                     </div>
-//                     <div className="item" style={{ "--position": 3 }}>
-//                         <img src={slider2_3} alt="Slider 2 - 3" />
-//                     </div>
-//                     <div className="item" style={{ "--position": 4 }}>
-//                         <img src={slider2_4} alt="Slider 2 - 4" />
-//                     </div>
-//                     <div className="item" style={{ "--position": 5 }}>
-//                         <img src={slider2_5} alt="Slider 2 - 5" />
-//                     </div>
-//                     <div className="item" style={{ "--position": 6 }}>
-//                         <img src={slider2_6} alt="Slider 2 - 6" />
-//                     </div>
-//                     <div className="item" style={{ "--position": 7 }}>
-//                         <img src={slider2_7} alt="Slider 2 - 7" />
-//                     </div>
-//                     <div className="item" style={{ "--position": 8 }}>
-//                         <img src={slider2_8} alt="Slider 2 - 8" />
-//                     </div>
-//                     <div className="item" style={{ "--position": 9 }}>
-//                         <img src={slider2_9} alt="Slider 2 - 9" />
-//                     </div>
-//                 </div>
-//             </div>
-//         </main>
-//     );
-// }
-// export default reviews
+import React from "react";
+import "./index.css";
+
+import slider2_1 from "./images/slider2_1.png";
+import slider2_2 from "./images/slider2_2.png";
+import slider2_3 from "./images/slider2_3.png";
+import slider2_4 from "./images/slider2_4.png";
+import slider2_5 from "./images/slider2_5.png";
+
+const feedbacks = [
+    {
+        avatar: slider2_1,
+        rating: 5,
+        location: "Shanghai, China",
+        comment: "这个产品真的非常棒！我已经推荐给很多朋友了，大家都说很好用。五星好评！",
+    },
+    {
+        avatar: slider2_2,
+        rating: 4,
+        location: "Dublin, Ireland",
+        comment: "Works great. The customer service is amazing. Highly recommend to anyone needing this.",
+    },
+    {
+        avatar: slider2_3,
+        rating: 5,
+        location: "Tokyo, Japan",
+        comment: "デザインがとても綺麗で、使いやすいです。また購入したいと思います！",
+    },
+    {
+        avatar: slider2_4,
+        rating: 3,
+        location: "Berlin, Germany",
+        comment: "It's okay for the price, but delivery was a bit slow. Overall, still a decent product.",
+    },
+    {
+        avatar: slider2_5,
+        rating: 5,
+        location: "San Francisco, USA",
+        comment: "Love it! Slick design and very intuitive to use. Would definitely buy again.",
+    },
+];
+
+const getStars = (rating) => "★".repeat(rating) + "☆".repeat(5 - rating);
+
+const Reviews = () => {
+    return (
+        <main>
+            <section className="grid-3">
+                <p className="note-text" style={{ color: "#f1683a" }}>&#8600;顾客反馈</p>
+            </section>
+
+            <div
+                className="slider"
+                reverse="true"
+                style={{ "--width": "300px", "--height": "400px", "--quantity": feedbacks.length }}
+            >
+                <div className="list">
+                    {feedbacks.map((item, index) => (
+                        <div className="item" style={{ "--position": index + 1 }} key={index}>
+                            <div className="review-card">
+                                <img src={item.avatar} alt="avatar" className="avatar" />
+                                <div className="rating">{getStars(item.rating)}</div>
+                                <div className="location">{item.location}</div>
+                                <div className="feedback">{item.comment}</div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </main>
+    );
+};
+
+export default Reviews;
