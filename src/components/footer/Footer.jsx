@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaInstagram, FaWeixin, FaWhatsapp } from 'react-icons/fa'
+import { MdPersonPin } from "react-icons/md";
 import "./index.css"
 import ctrip from "./images/ctrip-icon.svg"
 import instagram from "./images/instagram.svg"
@@ -38,8 +39,8 @@ const Footer = () => {
             <div className="right-column">
                 <h1>位置</h1>
                 <div className="map-container">
-                    <div className="pin">
-                        Pin
+                    <div className="pin-button">
+                        <MdPersonPin />
                     </div>
                     <iframe
                         title="Yujian Huakai Location"
