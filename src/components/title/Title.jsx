@@ -46,9 +46,9 @@ const Title = () => {
 
             <section className="grid grid-3">
                 <div className="autoBLur">与你的不期而遇</div>
-                <div className="autoBLur">与你的</div>
+                <div className="autoBLur">与你的与你的不期而遇</div>
                 <div className="autoBLur">与你的不期而遇</div>
-                <div className="autoBLur">与你的不 +</div>
+                <div className="autoBLur">与你的不 与你的不期而遇+</div>
                 <div className="autoBLur"><p className="note-text">了解更多&#8600;</p> </div>
             </section>
         </main>
