@@ -6,6 +6,8 @@
     grid-template-rows: auto auto auto;
     gap: 1rem;
     padding: 1rem;
+    position: relative;
+    z-index: 2;
 }
 
 /* Top-left container (row 1, col 1) */

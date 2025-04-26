@@ -12,7 +12,6 @@ const App = () => {
             <Nav />
             <Title />
             <History />
-            <Videos />
             <Reviews />
             <Footer />
         </main>

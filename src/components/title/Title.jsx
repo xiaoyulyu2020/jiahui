@@ -25,6 +25,8 @@ const Title = () => {
                     <figure>
                         <img src={sixImage} alt="Six Image" />
                     </figure>
+
+                    
                     <p>
                         🌸 北京遇见花开 · 民宿介绍
                         在喧嚣的都市中，遇见一处静谧如花的角落 —— 这就是 北京遇见花开民宿。<br/>
